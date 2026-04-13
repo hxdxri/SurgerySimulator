@@ -10,7 +10,7 @@ The parent repository still indexed `StreamingDepthDataFromTheTrueDepthCamera` a
 
 ## Decision
 
-Remove the stale gitlink entry and track `StreamingDepthDataFromTheTrueDepthCamera/` as a normal directory in the parent repository.
+Remove the stale gitlink entry and track the iOS app as a normal directory in the parent repository. The initial normalized path was `StreamingDepthDataFromTheTrueDepthCamera/`; the repository was later reorganized to `app/ios/`.
 
 ## Consequences
 

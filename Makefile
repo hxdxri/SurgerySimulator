@@ -1,4 +1,4 @@
-PROJECT := StreamingDepthDataFromTheTrueDepthCamera/TrueDepthStreamer.xcodeproj
+PROJECT := app/ios/TrueDepthStreamer.xcodeproj
 SCHEME := TrueDepthStreamer
 DERIVED_DATA ?= /tmp/TrueDepthBuild
 IOS_SIMULATOR_DESTINATION ?= platform=iOS Simulator,name=iPhone 16

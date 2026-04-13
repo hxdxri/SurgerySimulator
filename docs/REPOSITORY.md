@@ -7,19 +7,19 @@
 - `docs/`: architecture, testing, CI, ADRs, and reports
 - `.github/`: workflows and issue or pull request templates
 - `scripts/ci/`: local wrappers used by CI and developers
-- `StreamingDepthDataFromTheTrueDepthCamera/`: iOS app source tree and Xcode project
+- `app/ios/`: iOS app source tree and Xcode project
 
-## Why The App Still Lives Under `StreamingDepthDataFromTheTrueDepthCamera/`
+## Why The App Lives Under `app/ios/`
 
-The repository started from an Apple sample project. The app was kept in that directory for one pragmatic reason:
+The repository started from an Apple sample project. The app was first kept under the sample directory for one pragmatic reason:
 
 - it preserved the existing Xcode project, assets, plist paths, and target wiring while the architecture was being replaced
 
-That kept churn low while the modular pipeline was established. The directory is now a normal tracked folder in the parent repository, not a git submodule. A future rename to `ios-app/` or `app/ios/` is possible once the project surface is more stable.
+After the modular pipeline stabilized, the app was moved into `app/ios/` so the repository layout matches its long-term purpose rather than its sample-code origin.
 
 ## App Layout
 
-Inside `StreamingDepthDataFromTheTrueDepthCamera/TrueDepthStreamer/`:
+Inside `app/ios/TrueDepthStreamer/`:
 
 - `App/`: programmatic app entry and root view controller
 - `Pipeline/`: orchestration only

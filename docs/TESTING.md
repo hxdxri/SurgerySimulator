@@ -63,3 +63,7 @@ IOS_SIMULATOR_DESTINATION="platform=iOS Simulator,name=iPhone 16" ./scripts/ci/t
 ## Simulator-Limited Environments
 
 If CoreSimulator is unavailable on a machine, use `make test-build` to verify the test target still compiles and links. That is not a substitute for running tests on a healthy simulator runner, but it does validate project wiring and test code compilation.
+
+If `IOS_SIMULATOR_DESTINATION` is unset, the test script will try to select the first available iPhone simulator from `simctl` before falling back to `iPhone 16`.
+
+The CI scripts also use separate default DerivedData directories so local build and test invocations can run without sharing the same Xcode build database.

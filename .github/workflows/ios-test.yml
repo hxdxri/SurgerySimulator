@@ -17,6 +17,9 @@ concurrency:
   group: ios-test-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on:
@@ -24,7 +27,7 @@ jobs:
       - macOS
       - Xcode
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
       - name: Show Xcode Version
         run: xcodebuild -version

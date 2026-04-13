@@ -28,6 +28,8 @@ The workflows call repository scripts instead of embedding long `xcodebuild` com
 
 That keeps local and CI behavior aligned.
 
+Each script uses its own default DerivedData directory under `RUNNER_TEMP` or `/tmp` so build and test jobs do not contend for the same Xcode build database.
+
 ## Environment
 
 The test workflow uses:
@@ -38,7 +40,7 @@ Default:
 
 `platform=iOS Simulator,name=iPhone 16`
 
-Override this through the workflow dispatch input if your local runner uses a different simulator. The local script also falls back to the same default if the environment variable is unset or empty.
+Override this through the workflow dispatch input if your local runner uses a different simulator. If the environment variable is unset or empty, the local test script first attempts to pick the first available iPhone simulator from `simctl`, then falls back to `iPhone 16`.
 
 ## Failure Interpretation
 

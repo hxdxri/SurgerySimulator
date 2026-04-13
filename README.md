@@ -30,12 +30,13 @@ SurgerySimulator is an iOS face-mesh transformation app built as a modular pipel
 |-- docs/
 |-- .github/
 |-- scripts/ci/
-`-- StreamingDepthDataFromTheTrueDepthCamera/
-    |-- TrueDepthStreamer.xcodeproj
-    `-- TrueDepthStreamer/
+`-- app/
+    `-- ios/
+        |-- TrueDepthStreamer.xcodeproj
+        `-- TrueDepthStreamer/
 ```
 
-The app stays under `StreamingDepthDataFromTheTrueDepthCamera/` because that preserved the existing Xcode project and sample assets while the architecture was replaced. It is now tracked as a normal directory in the parent repository, not as a submodule.
+The app now lives under `app/ios/`. It was initially kept under the sample directory to preserve the existing Xcode project and assets during the architecture rewrite, then moved into a stable application path once the modular pipeline was in place.
 
 ## Documentation
 

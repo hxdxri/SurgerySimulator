@@ -17,9 +17,9 @@
 
 ## Xcode Project
 
-- Main app project: `StreamingDepthDataFromTheTrueDepthCamera/TrueDepthStreamer.xcodeproj`
+- Main app project: `app/ios/TrueDepthStreamer.xcodeproj`
 - Main scheme: `TrueDepthStreamer`
-- Unit tests live under `StreamingDepthDataFromTheTrueDepthCamera/TrueDepthStreamerTests`
+- Unit tests live under `app/ios/TrueDepthStreamerTests`
 
 ## Documentation
 
