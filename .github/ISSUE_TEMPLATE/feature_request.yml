@@ -1,0 +1,25 @@
+name: Feature Request
+description: Propose a new capability or architectural improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What limitation or opportunity is driving this request?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the proposed change.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Architectural Impact
+      description: Explain which layers or contracts would be affected.
