@@ -42,6 +42,8 @@ Default:
 
 Override this through the workflow dispatch input if your local runner uses a different simulator. If the environment variable is unset or empty, the local test script first attempts to pick the first available iPhone simulator from `simctl`, then falls back to `iPhone 16`.
 
+The current implementation prefers a booted iPhone simulator if one exists, otherwise it picks the first available iPhone UDID and passes that to `xcodebuild`.
+
 ## Failure Interpretation
 
 - build failure: broken compile, project wiring, or configuration

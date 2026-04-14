@@ -66,4 +66,6 @@ If CoreSimulator is unavailable on a machine, use `make test-build` to verify th
 
 If `IOS_SIMULATOR_DESTINATION` is unset, the test script will try to select the first available iPhone simulator from `simctl` before falling back to `iPhone 16`.
 
+If a booted iPhone simulator exists, the script uses it first and passes `id=<udid>` to `xcodebuild` instead of a simulator name.
+
 The CI scripts also use separate default DerivedData directories so local build and test invocations can run without sharing the same Xcode build database.
