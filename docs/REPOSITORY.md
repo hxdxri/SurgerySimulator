@@ -4,10 +4,12 @@
 
 - `README.md`: repository overview and quick start
 - `CONTRIBUTING.md`: contributor workflow and constraints
-- `docs/`: architecture, testing, CI, ADRs, and reports
+- `docs/`: architecture, product, planning, quality, ADRs, and reports
+- `.ai/`: contributor context, onboarding notes, and repeatable engineering heuristics
 - `.github/`: workflows and issue or pull request templates
 - `scripts/ci/`: local wrappers used by CI and developers
 - `app/ios/`: iOS app source tree and Xcode project
+- `CODEOWNERS`, `SECURITY.md`, `SUPPORT.md`: repository hygiene and support policy
 
 ## Why The App Lives Under `app/ios/`
 
@@ -44,3 +46,10 @@ Everything downstream uses repository-owned models only:
 - `FaceFrame`
 - `SimulationState`
 - `DeformationContext`
+
+## Planning And Quality Structure
+
+- `docs/product/`: what the product is, what stage it is in, and where it is headed
+- `docs/planning/`: current milestone, backlog, and delivery conventions
+- `docs/quality/`: test strategy, device validation, and simulator guidance
+- `.ai/`: repo context for day-to-day contributors and onboarding

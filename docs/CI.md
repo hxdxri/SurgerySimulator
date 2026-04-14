@@ -30,25 +30,58 @@ That keeps local and CI behavior aligned.
 
 Each script uses its own default DerivedData directory under `RUNNER_TEMP` or `/tmp` so build and test jobs do not contend for the same Xcode build database.
 
+Each script also accepts:
+
+- `RESULT_BUNDLE_PATH`
+- `XCODEBUILD_LOG_PATH`
+
+The workflows set those explicitly so artifact paths stay predictable.
+
 ## Environment
 
 The test workflow uses:
 
 - `IOS_SIMULATOR_DESTINATION`
 
-Default:
-
-`platform=iOS Simulator,name=iPhone 16`
-
-Override this through the workflow dispatch input if your local runner uses a different simulator. If the environment variable is unset or empty, the local test script first attempts to pick the first available iPhone simulator from `simctl`, then falls back to `iPhone 16`.
-
-The current implementation prefers a booted iPhone simulator if one exists, otherwise it picks the first available iPhone UDID and passes that to `xcodebuild`.
+The workflow dispatch input is an optional override only. If the environment variable is unset or empty, the local test script first attempts to pick a booted iPhone simulator from `simctl`, then the first available iPhone UDID, and only then falls back to `iPhone 16` by name.
 
 ## Failure Interpretation
 
 - build failure: broken compile, project wiring, or configuration
 - test failure: broken pure logic contract or export behavior
 - destination failure: runner simulator configuration mismatch
+
+## Artifacts
+
+The workflows now retain artifacts on both success and failure.
+
+Build workflow:
+
+- `build.xcresult`
+- `xcodebuild-build.log`
+- `xcode-version.txt`
+
+Test workflow:
+
+- `test.xcresult`
+- `xcodebuild-test.log`
+- `available-simulators.txt`
+- `xcode-version.txt`
+
+### How To Inspect Artifacts
+
+1. Open the relevant GitHub Actions run.
+2. Scroll to the `Artifacts` section near the run summary.
+3. Download the `ios-build-artifacts` or `ios-test-artifacts` archive.
+4. Unzip it locally.
+5. Open the `.xcresult` bundle in Xcode:
+
+```bash
+open build.xcresult
+open test.xcresult
+```
+
+The `.xcresult` bundle contains the structured build or test report; the `.log` file is the raw console output that the runner streamed during the job.
 
 ## Fallback Verification
 

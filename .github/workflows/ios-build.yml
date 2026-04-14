@@ -24,8 +24,30 @@ jobs:
     steps:
       - uses: actions/checkout@v6.0.2
 
+      - name: Prepare Artifact Paths
+        run: |
+          mkdir -p "$RUNNER_TEMP/ios-build-artifacts"
+          echo "BUILD_RESULT_BUNDLE=$RUNNER_TEMP/ios-build-artifacts/build.xcresult" >> "$GITHUB_ENV"
+          echo "BUILD_LOG_PATH=$RUNNER_TEMP/ios-build-artifacts/xcodebuild-build.log" >> "$GITHUB_ENV"
+          echo "XCODE_VERSION_PATH=$RUNNER_TEMP/ios-build-artifacts/xcode-version.txt" >> "$GITHUB_ENV"
+
       - name: Show Xcode Version
-        run: xcodebuild -version
+        run: xcodebuild -version | tee "$XCODE_VERSION_PATH"
 
       - name: Build
+        env:
+          RESULT_BUNDLE_PATH: ${{ env.BUILD_RESULT_BUNDLE }}
+          XCODEBUILD_LOG_PATH: ${{ env.BUILD_LOG_PATH }}
         run: ./scripts/ci/build_ios.sh
+
+      - name: Upload Build Artifacts
+        if: always()
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: ios-build-artifacts
+          path: |
+            ${{ env.BUILD_RESULT_BUNDLE }}
+            ${{ env.BUILD_LOG_PATH }}
+            ${{ env.XCODE_VERSION_PATH }}
+          if-no-files-found: warn
+          retention-days: 14

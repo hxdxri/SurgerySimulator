@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       simulator_destination:
-        description: Xcode destination string for the simulator
+        description: Optional Xcode destination override for the simulator
         required: false
-        default: platform=iOS Simulator,name=iPhone 16
+        default: ""
 
 concurrency:
   group: ios-test-${{ github.ref }}
@@ -29,13 +29,36 @@ jobs:
     steps:
       - uses: actions/checkout@v6.0.2
 
+      - name: Prepare Artifact Paths
+        run: |
+          mkdir -p "$RUNNER_TEMP/ios-test-artifacts"
+          echo "TEST_RESULT_BUNDLE=$RUNNER_TEMP/ios-test-artifacts/test.xcresult" >> "$GITHUB_ENV"
+          echo "TEST_LOG_PATH=$RUNNER_TEMP/ios-test-artifacts/xcodebuild-test.log" >> "$GITHUB_ENV"
+          echo "SIMULATOR_LIST_PATH=$RUNNER_TEMP/ios-test-artifacts/available-simulators.txt" >> "$GITHUB_ENV"
+          echo "XCODE_VERSION_PATH=$RUNNER_TEMP/ios-test-artifacts/xcode-version.txt" >> "$GITHUB_ENV"
+
       - name: Show Xcode Version
-        run: xcodebuild -version
+        run: xcodebuild -version | tee "$XCODE_VERSION_PATH"
 
       - name: Show Available Simulators
-        run: xcrun simctl list devices available
+        run: xcrun simctl list devices available | tee "$SIMULATOR_LIST_PATH"
 
       - name: Run Unit Tests
         env:
           IOS_SIMULATOR_DESTINATION: ${{ github.event.inputs.simulator_destination }}
+          RESULT_BUNDLE_PATH: ${{ env.TEST_RESULT_BUNDLE }}
+          XCODEBUILD_LOG_PATH: ${{ env.TEST_LOG_PATH }}
         run: ./scripts/ci/test_ios.sh
+
+      - name: Upload Test Artifacts
+        if: always()
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: ios-test-artifacts
+          path: |
+            ${{ env.TEST_RESULT_BUNDLE }}
+            ${{ env.TEST_LOG_PATH }}
+            ${{ env.SIMULATOR_LIST_PATH }}
+            ${{ env.XCODE_VERSION_PATH }}
+          if-no-files-found: warn
+          retention-days: 14

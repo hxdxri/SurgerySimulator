@@ -2,6 +2,7 @@ import Foundation
 
 protocol FacePipelineControllerDelegate: AnyObject {
     func facePipelineController(_ controller: FacePipelineController, didChangeStatus message: String)
+    func facePipelineController(_ controller: FacePipelineController, didUpdateCaptureStatus status: FaceCaptureStatus)
 }
 
 final class FacePipelineController {
@@ -55,6 +56,7 @@ extension FacePipelineController: FaceFrameConsumer {
 
 extension FacePipelineController: FaceCaptureManagerDelegate {
     func faceCaptureManager(_ manager: FaceCaptureManaging, didChange status: FaceCaptureStatus) {
+        delegate?.facePipelineController(self, didUpdateCaptureStatus: status)
         delegate?.facePipelineController(self, didChangeStatus: status.message)
         if case .interruptedEnded = status {
             captureManager.start()

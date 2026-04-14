@@ -1,7 +1,7 @@
 PROJECT := app/ios/TrueDepthStreamer.xcodeproj
 SCHEME := TrueDepthStreamer
 DERIVED_DATA ?= /tmp/TrueDepthBuild
-IOS_SIMULATOR_DESTINATION ?= platform=iOS Simulator,name=iPhone 16
+IOS_SIMULATOR_DESTINATION ?=
 
 .PHONY: build test test-build ci docs
 
