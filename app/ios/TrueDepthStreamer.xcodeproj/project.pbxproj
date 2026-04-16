@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1B2C310D4E5F60100000010 /* DeformationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D310E4F5060100000010 /* DeformationContext.swift */; };
-		A1B2C311D4E5F60100000011 /* SimulationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D311E4F5060100000011 /* SimulationState.swift */; };
-		A1B2C312D4E5F60100000012 /* OBJFaceMeshExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D312E4F5060100000012 /* OBJFaceMeshExporter.swift */; };
 		A1B2C301D4E5F60100000001 /* FacePipelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D301E4F5060100000001 /* FacePipelineViewController.swift */; };
 		A1B2C302D4E5F60100000002 /* FacePipelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D302E4F5060100000002 /* FacePipelineController.swift */; };
 		A1B2C303D4E5F60100000003 /* FaceCaptureManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D303E4F5060100000003 /* FaceCaptureManaging.swift */; };
@@ -25,22 +22,13 @@
 		A1B2C30DD4E5F6010000000D /* SceneKitFaceMeshRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D30DE4F506010000000D /* SceneKitFaceMeshRenderer.swift */; };
 		A1B2C30ED4E5F6010000000E /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D30EE4F506010000000E /* ControlsView.swift */; };
 		A1B2C30FD4E5F6010000000F /* FaceMeshExporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D30FE4F506010000000F /* FaceMeshExporting.swift */; };
-		261FA1F71E945EEA00BE8D47 /* VideoMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FA1F61E945EEA00BE8D47 /* VideoMixer.swift */; };
-		261FA1F91E94641700BE8D47 /* Mixer.metal in Sources */ = {isa = PBXBuildFile; fileRef = 261FA1F81E94641700BE8D47 /* Mixer.metal */; };
-		2633CF1D1E7C65D500FC80E1 /* DepthToJETConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633CF1C1E7C65D500FC80E1 /* DepthToJETConverter.swift */; };
-		2672370E1E79BFC0003D2EAA /* DepthToJET.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2672370D1E79BFBF003D2EAA /* DepthToJET.metal */; };
-		6D20BC101FFE665100496684 /* PointCloudMetalView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D20BC0F1FFE665100496684 /* PointCloudMetalView.mm */; };
-		C3444A7D1FFE6110002D901D /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3444A741FFE6110002D901D /* AAPLTransforms.mm */; };
-		C3444A7E1FFE6110002D901D /* PointCloud.metal in Sources */ = {isa = PBXBuildFile; fileRef = C3444A751FFE6110002D901D /* PointCloud.metal */; };
-		C3B256731FDE655200617DD7 /* HistogramCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B256711FDE655100617DD7 /* HistogramCalculator.m */; };
-		E422DFC01CEF894F0047D7A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E422DFBE1CEF894F0047D7A4 /* Main.storyboard */; };
-		E422DFC21CEF894F0047D7A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E422DFC11CEF894F0047D7A4 /* Assets.xcassets */; };
-		E422DFC51CEF894F0047D7A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E422DFC31CEF894F0047D7A4 /* LaunchScreen.storyboard */; };
-		E422DFCE1CEF8AF50047D7A4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E422DFCC1CEF8AF50047D7A4 /* CameraViewController.swift */; };
+			A1B2C310D4E5F60100000010 /* DeformationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D310E4F5060100000010 /* DeformationContext.swift */; };
+			A1B2C311D4E5F60100000011 /* SimulationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D311E4F5060100000011 /* SimulationState.swift */; };
+			A1B2C312D4E5F60100000012 /* OBJFaceMeshExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D312E4F5060100000012 /* OBJFaceMeshExporter.swift */; };
+			A1B2C313D4E5F60100000013 /* FaceCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D313E4F5060100000013 /* FaceCanvasViewController.swift */; };
+			A1B2C314D4E5F60100000014 /* FaceMeshSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D314E4F5060100000014 /* FaceMeshSnapshot.swift */; };
+			E422DFC21CEF894F0047D7A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E422DFC11CEF894F0047D7A4 /* Assets.xcassets */; };
 		E422DFCF1CEF8AF50047D7A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E422DFCD1CEF8AF50047D7A4 /* AppDelegate.swift */; };
-		E46129041CF4C0B8004FE176 /* PreviewMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46129031CF4C0B8004FE176 /* PreviewMetalView.swift */; };
-		E4A8A1421CF6188A006823AB /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = E4A8A1411CF6188A006823AB /* PassThrough.metal */; };
-		E4E160DB1D00979000C83A5A /* FilterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E160DA1D00979000C83A5A /* FilterRenderer.swift */; };
 		F1A2B301C4D5E60100000001 /* TestFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B311C4D5E60100000001 /* TestFixtures.swift */; };
 		F1A2B302C4D5E60100000002 /* NoseAugmentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B312C4D5E60100000002 /* NoseAugmentationTests.swift */; };
 		F1A2B303C4D5E60100000003 /* DeformationPipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B313C4D5E60100000003 /* DeformationPipelineTests.swift */; };
@@ -59,23 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D1E2F300A1B2C3D400000000 /* Repository Root */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Repository Root"; path = ../..; sourceTree = SOURCE_ROOT; };
-		D1E2F301A1B2C3D400000001 /* xcode-context */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "xcode-context"; path = ../../xcode-context; sourceTree = SOURCE_ROOT; };
-		D1E2F302A1B2C3D400000002 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
-		D1E2F303A1B2C3D400000003 /* .ai */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ".ai"; path = ../../.ai; sourceTree = SOURCE_ROOT; };
-		D1E2F304A1B2C3D400000004 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ".github"; path = ../../.github; sourceTree = SOURCE_ROOT; };
-		D1E2F305A1B2C3D400000005 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../../scripts; sourceTree = SOURCE_ROOT; };
-		D1E2F306A1B2C3D400000006 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; name = app; path = ../../app; sourceTree = SOURCE_ROOT; };
-		D1E2F307A1B2C3D400000007 /* Repo README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Repo README.md"; path = ../../README.md; sourceTree = SOURCE_ROOT; };
-		D1E2F308A1B2C3D400000008 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ../../CONTRIBUTING.md; sourceTree = SOURCE_ROOT; };
-		D1E2F309A1B2C3D400000009 /* CODEOWNERS */ = {isa = PBXFileReference; lastKnownFileType = text; path = ../../CODEOWNERS; sourceTree = SOURCE_ROOT; };
-		D1E2F30AA1B2C3D40000000A /* SECURITY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ../../SECURITY.md; sourceTree = SOURCE_ROOT; };
-		D1E2F30BA1B2C3D40000000B /* SUPPORT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ../../SUPPORT.md; sourceTree = SOURCE_ROOT; };
-		D1E2F30CA1B2C3D40000000C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = ../../.gitignore; sourceTree = SOURCE_ROOT; };
-		D1E2F30DA1B2C3D40000000D /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = ../../Makefile; sourceTree = SOURCE_ROOT; };
-		B1C2D310E4F5060100000010 /* DeformationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformationContext.swift; sourceTree = "<group>"; };
-		B1C2D311E4F5060100000011 /* SimulationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationState.swift; sourceTree = "<group>"; };
-		B1C2D312E4F5060100000012 /* OBJFaceMeshExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBJFaceMeshExporter.swift; sourceTree = "<group>"; };
+		261FA1F61E945EEA00BE8D47 /* VideoMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMixer.swift; sourceTree = "<group>"; };
+		261FA1F81E94641700BE8D47 /* Mixer.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Mixer.metal; sourceTree = "<group>"; };
+		2633CF1C1E7C65D500FC80E1 /* DepthToJETConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthToJETConverter.swift; sourceTree = "<group>"; };
+		2672370D1E79BFBF003D2EAA /* DepthToJET.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DepthToJET.metal; sourceTree = "<group>"; };
+		267ED84D1ED7965A00898078 /* TrueDepthStreamer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrueDepthStreamer-Bridging-Header.h"; sourceTree = "<group>"; };
+		599ED10E56E1D2E68231F75C /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		6D20BC0F1FFE665100496684 /* PointCloudMetalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointCloudMetalView.mm; sourceTree = "<group>"; };
+		A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		B1C2D301E4F5060100000001 /* FacePipelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePipelineViewController.swift; sourceTree = "<group>"; };
 		B1C2D302E4F5060100000002 /* FacePipelineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePipelineController.swift; sourceTree = "<group>"; };
 		B1C2D303E4F5060100000003 /* FaceCaptureManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureManaging.swift; sourceTree = "<group>"; };
@@ -91,20 +70,31 @@
 		B1C2D30DE4F506010000000D /* SceneKitFaceMeshRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitFaceMeshRenderer.swift; sourceTree = "<group>"; };
 		B1C2D30EE4F506010000000E /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		B1C2D30FE4F506010000000F /* FaceMeshExporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMeshExporting.swift; sourceTree = "<group>"; };
-		261FA1F61E945EEA00BE8D47 /* VideoMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMixer.swift; sourceTree = "<group>"; };
-		261FA1F81E94641700BE8D47 /* Mixer.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Mixer.metal; sourceTree = "<group>"; };
-		2633CF1C1E7C65D500FC80E1 /* DepthToJETConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthToJETConverter.swift; sourceTree = "<group>"; };
-		2672370D1E79BFBF003D2EAA /* DepthToJET.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DepthToJET.metal; sourceTree = "<group>"; };
-		267ED84D1ED7965A00898078 /* TrueDepthStreamer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrueDepthStreamer-Bridging-Header.h"; sourceTree = "<group>"; };
-		599ED10E56E1D2E68231F75C /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
-		6D20BC0F1FFE665100496684 /* PointCloudMetalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointCloudMetalView.mm; sourceTree = "<group>"; };
-		A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+			B1C2D310E4F5060100000010 /* DeformationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeformationContext.swift; sourceTree = "<group>"; };
+			B1C2D311E4F5060100000011 /* SimulationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationState.swift; sourceTree = "<group>"; };
+			B1C2D312E4F5060100000012 /* OBJFaceMeshExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBJFaceMeshExporter.swift; sourceTree = "<group>"; };
+			B1C2D313E4F5060100000013 /* FaceCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCanvasViewController.swift; sourceTree = "<group>"; };
+			B1C2D314E4F5060100000014 /* FaceMeshSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMeshSnapshot.swift; sourceTree = "<group>"; };
 		C3444A731FFE6110002D901D /* PointCloudMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointCloudMetalView.h; sourceTree = "<group>"; };
 		C3444A741FFE6110002D901D /* AAPLTransforms.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTransforms.mm; sourceTree = "<group>"; };
 		C3444A751FFE6110002D901D /* PointCloud.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PointCloud.metal; sourceTree = "<group>"; };
 		C3444A781FFE6110002D901D /* AAPLTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTransforms.h; sourceTree = "<group>"; };
 		C3B256711FDE655100617DD7 /* HistogramCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistogramCalculator.m; sourceTree = "<group>"; };
 		C3B256721FDE655200617DD7 /* HistogramCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistogramCalculator.h; sourceTree = "<group>"; };
+		D1E2F300A1B2C3D400000000 /* Repository Root */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Repository Root"; path = ../..; sourceTree = SOURCE_ROOT; };
+		D1E2F301A1B2C3D400000001 /* xcode-context */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "xcode-context"; path = "../../xcode-context"; sourceTree = SOURCE_ROOT; };
+		D1E2F302A1B2C3D400000002 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = docs; path = ../../docs; sourceTree = SOURCE_ROOT; };
+		D1E2F303A1B2C3D400000003 /* .ai */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .ai; path = ../../.ai; sourceTree = SOURCE_ROOT; };
+		D1E2F304A1B2C3D400000004 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../../.github; sourceTree = SOURCE_ROOT; };
+		D1E2F305A1B2C3D400000005 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../../scripts; sourceTree = SOURCE_ROOT; };
+		D1E2F306A1B2C3D400000006 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; name = app; path = ../../app; sourceTree = SOURCE_ROOT; };
+		D1E2F307A1B2C3D400000007 /* Repo README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Repo README.md"; path = ../../README.md; sourceTree = SOURCE_ROOT; };
+		D1E2F308A1B2C3D400000008 /* ../../CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ../../CONTRIBUTING.md; sourceTree = SOURCE_ROOT; };
+		D1E2F309A1B2C3D400000009 /* ../../CODEOWNERS */ = {isa = PBXFileReference; lastKnownFileType = text; path = ../../CODEOWNERS; sourceTree = SOURCE_ROOT; };
+		D1E2F30AA1B2C3D40000000A /* ../../SECURITY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ../../SECURITY.md; sourceTree = SOURCE_ROOT; };
+		D1E2F30BA1B2C3D40000000B /* ../../SUPPORT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ../../SUPPORT.md; sourceTree = SOURCE_ROOT; };
+		D1E2F30CA1B2C3D40000000C /* ../../.gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = ../../.gitignore; sourceTree = SOURCE_ROOT; };
+		D1E2F30DA1B2C3D40000000D /* ../../Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = ../../Makefile; sourceTree = SOURCE_ROOT; };
 		E414FC6C1D5921FD0007C979 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E422DFB71CEF894F0047D7A4 /* TrueDepthStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueDepthStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E422DFBF1CEF894F0047D7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E422DFB41CEF894F0047D7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1A2B321C4D5E60100000011 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,43 +130,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E422DFB41CEF894F0047D7A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D1E2F310A1B2C3D400000010 /* Repository Context */ = {
+		2672370F1E79BFD1003D2EAA /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				D1E2F300A1B2C3D400000000 /* Repository Root */,
-				D1E2F301A1B2C3D400000001 /* xcode-context */,
-				D1E2F302A1B2C3D400000002 /* docs */,
-				D1E2F303A1B2C3D400000003 /* .ai */,
-				D1E2F304A1B2C3D400000004 /* .github */,
-				D1E2F305A1B2C3D400000005 /* scripts */,
-				D1E2F306A1B2C3D400000006 /* app */,
-				D1E2F307A1B2C3D400000007 /* Repo README.md */,
-				D1E2F308A1B2C3D400000008 /* CONTRIBUTING.md */,
-				D1E2F309A1B2C3D400000009 /* CODEOWNERS */,
-				D1E2F30AA1B2C3D40000000A /* SECURITY.md */,
-				D1E2F30BA1B2C3D40000000B /* SUPPORT.md */,
-				D1E2F30CA1B2C3D40000000C /* .gitignore */,
-				D1E2F30DA1B2C3D40000000D /* Makefile */,
+				E4A8A1411CF6188A006823AB /* PassThrough.metal */,
+				2672370D1E79BFBF003D2EAA /* DepthToJET.metal */,
+				C3444A751FFE6110002D901D /* PointCloud.metal */,
+				261FA1F81E94641700BE8D47 /* Mixer.metal */,
 			);
-			name = "Repository Context";
+			path = Shaders;
 			sourceTree = "<group>";
 		};
-		C1D2E301F4A5060100000001 /* App */ = {
+		5EC63FFD9D9A3793DBA4755D /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				E422DFCD1CEF8AF50047D7A4 /* AppDelegate.swift */,
-				B1C2D301E4F5060100000001 /* FacePipelineViewController.swift */,
+				A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */,
 			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		8F7DEDF83CEB2358D1CCC092 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+			C1D2E301F4A5060100000001 /* App */ = {
+				isa = PBXGroup;
+				children = (
+					E422DFCD1CEF8AF50047D7A4 /* AppDelegate.swift */,
+					B1C2D313E4F5060100000013 /* FaceCanvasViewController.swift */,
+					B1C2D301E4F5060100000001 /* FacePipelineViewController.swift */,
+				);
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -191,13 +187,14 @@
 			path = Capture;
 			sourceTree = "<group>";
 		};
-		C1D2E304F4A5060100000004 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B1C2D306E4F5060100000006 /* FaceMesh.swift */,
-				B1C2D307E4F5060100000007 /* FaceLandmarks.swift */,
-				B1C2D308E4F5060100000008 /* FaceFrame.swift */,
-			);
+			C1D2E304F4A5060100000004 /* Model */ = {
+				isa = PBXGroup;
+				children = (
+					B1C2D306E4F5060100000006 /* FaceMesh.swift */,
+					B1C2D307E4F5060100000007 /* FaceLandmarks.swift */,
+					B1C2D308E4F5060100000008 /* FaceFrame.swift */,
+					B1C2D314E4F5060100000014 /* FaceMeshSnapshot.swift */,
+				);
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -239,25 +236,6 @@
 			path = Export;
 			sourceTree = "<group>";
 		};
-		F1A2B317C4D5E60100000007 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F1A2B315C4D5E60100000005 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F1A2B318C4D5E60100000008 /* TrueDepthStreamerTests */ = {
-			isa = PBXGroup;
-			children = (
-				F1A2B311C4D5E60100000001 /* TestFixtures.swift */,
-				F1A2B312C4D5E60100000002 /* NoseAugmentationTests.swift */,
-				F1A2B313C4D5E60100000003 /* DeformationPipelineTests.swift */,
-				F1A2B314C4D5E60100000004 /* OBJFaceMeshExporterTests.swift */,
-			);
-			path = TrueDepthStreamerTests;
-			sourceTree = "<group>";
-		};
 		C1D2E309F4A5060100000009 /* LegacySample */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,32 +253,6 @@
 			name = LegacySample;
 			sourceTree = "<group>";
 		};
-		2672370F1E79BFD1003D2EAA /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				E4A8A1411CF6188A006823AB /* PassThrough.metal */,
-				2672370D1E79BFBF003D2EAA /* DepthToJET.metal */,
-				C3444A751FFE6110002D901D /* PointCloud.metal */,
-				261FA1F81E94641700BE8D47 /* Mixer.metal */,
-			);
-			path = Shaders;
-			sourceTree = "<group>";
-		};
-		5EC63FFD9D9A3793DBA4755D /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */,
-			);
-			name = Configuration;
-			sourceTree = "<group>";
-		};
-		8F7DEDF83CEB2358D1CCC092 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Configuration;
-			sourceTree = "<group>";
-		};
 		C3B2FE6F1FFA8B9A00D8BC60 /* PointCloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +262,27 @@
 				6D20BC0F1FFE665100496684 /* PointCloudMetalView.mm */,
 			);
 			path = PointCloud;
+			sourceTree = "<group>";
+		};
+		D1E2F310A1B2C3D400000010 /* Repository Context */ = {
+			isa = PBXGroup;
+			children = (
+				D1E2F300A1B2C3D400000000 /* Repository Root */,
+				D1E2F301A1B2C3D400000001 /* xcode-context */,
+				D1E2F302A1B2C3D400000002 /* docs */,
+				D1E2F303A1B2C3D400000003 /* .ai */,
+				D1E2F304A1B2C3D400000004 /* .github */,
+				D1E2F305A1B2C3D400000005 /* scripts */,
+				D1E2F306A1B2C3D400000006 /* app */,
+				D1E2F307A1B2C3D400000007 /* Repo README.md */,
+				D1E2F308A1B2C3D400000008 /* ../../CONTRIBUTING.md */,
+				D1E2F309A1B2C3D400000009 /* ../../CODEOWNERS */,
+				D1E2F30AA1B2C3D40000000A /* ../../SECURITY.md */,
+				D1E2F30BA1B2C3D40000000B /* ../../SUPPORT.md */,
+				D1E2F30CA1B2C3D40000000C /* ../../.gitignore */,
+				D1E2F30DA1B2C3D40000000D /* ../../Makefile */,
+			);
+			name = "Repository Context";
 			sourceTree = "<group>";
 		};
 		E422DFAE1CEF894F0047D7A4 = {
@@ -356,6 +329,25 @@
 			path = TrueDepthStreamer;
 			sourceTree = "<group>";
 		};
+		F1A2B317C4D5E60100000007 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2B315C4D5E60100000005 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1A2B318C4D5E60100000008 /* TrueDepthStreamerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2B311C4D5E60100000001 /* TestFixtures.swift */,
+				F1A2B312C4D5E60100000002 /* NoseAugmentationTests.swift */,
+				F1A2B313C4D5E60100000003 /* DeformationPipelineTests.swift */,
+				F1A2B314C4D5E60100000004 /* OBJFaceMeshExporterTests.swift */,
+			);
+			path = TrueDepthStreamerTests;
+			sourceTree = "<group>";
+		};
 		F42A8FA83BE709B991729441 /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +360,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E422DFB61CEF894F0047D7A4 /* TrueDepthStreamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E422DFC91CEF894F0047D7A4 /* Build configuration list for PBXNativeTarget "TrueDepthStreamer" */;
+			buildPhases = (
+				E422DFB31CEF894F0047D7A4 /* Sources */,
+				E422DFB41CEF894F0047D7A4 /* Frameworks */,
+				E422DFB51CEF894F0047D7A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrueDepthStreamer;
+			productName = TrueDepthViewer;
+			productReference = E422DFB71CEF894F0047D7A4 /* TrueDepthStreamer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F1A2B320C4D5E60100000010 /* TrueDepthStreamerTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1A2B329C4D5E60100000019 /* Build configuration list for PBXNativeTarget "TrueDepthStreamerTests" */;
@@ -386,23 +395,6 @@
 			productReference = F1A2B316C4D5E60100000006 /* TrueDepthStreamerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E422DFB61CEF894F0047D7A4 /* TrueDepthStreamer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E422DFC91CEF894F0047D7A4 /* Build configuration list for PBXNativeTarget "TrueDepthStreamer" */;
-			buildPhases = (
-				E422DFB31CEF894F0047D7A4 /* Sources */,
-				E422DFB41CEF894F0047D7A4 /* Frameworks */,
-				E422DFB51CEF894F0047D7A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TrueDepthStreamer;
-			productName = TrueDepthViewer;
-			productReference = E422DFB71CEF894F0047D7A4 /* TrueDepthStreamer.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -415,7 +407,6 @@
 				TargetAttributes = {
 					E422DFB61CEF894F0047D7A4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = A93A5CM278;
 						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
@@ -445,13 +436,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F1A2B323C4D5E60100000013 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E422DFB51CEF894F0047D7A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,9 +444,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1A2B323C4D5E60100000013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+			E422DFB31CEF894F0047D7A4 /* Sources */ = {
+				isa = PBXSourcesBuildPhase;
+				buildActionMask = 2147483647;
+				files = (
+					A1B2C314D4E5F60100000014 /* FaceMeshSnapshot.swift in Sources */,
+					A1B2C312D4E5F60100000012 /* OBJFaceMeshExporter.swift in Sources */,
+					A1B2C311D4E5F60100000011 /* SimulationState.swift in Sources */,
+					A1B2C310D4E5F60100000010 /* DeformationContext.swift in Sources */,
+					A1B2C30ED4E5F6010000000E /* ControlsView.swift in Sources */,
+					A1B2C30DD4E5F6010000000D /* SceneKitFaceMeshRenderer.swift in Sources */,
+				A1B2C30CD4E5F6010000000C /* MeshRenderer.swift in Sources */,
+				A1B2C30BD4E5F6010000000B /* NoseAugmentation.swift in Sources */,
+				A1B2C30AD4E5F6010000000A /* DeformationPipeline.swift in Sources */,
+				A1B2C309D4E5F60100000009 /* Deformation.swift in Sources */,
+				A1B2C308D4E5F60100000008 /* FaceFrame.swift in Sources */,
+				A1B2C307D4E5F60100000007 /* FaceLandmarks.swift in Sources */,
+				A1B2C306D4E5F60100000006 /* FaceMesh.swift in Sources */,
+					A1B2C305D4E5F60100000005 /* FaceCaptureManager.swift in Sources */,
+					A1B2C304D4E5F60100000004 /* ARKitFaceMeshAdapter.swift in Sources */,
+					A1B2C303D4E5F60100000003 /* FaceCaptureManaging.swift in Sources */,
+					A1B2C302D4E5F60100000002 /* FacePipelineController.swift in Sources */,
+					A1B2C301D4E5F60100000001 /* FacePipelineViewController.swift in Sources */,
+					A1B2C313D4E5F60100000013 /* FaceCanvasViewController.swift in Sources */,
+					A1B2C30FD4E5F6010000000F /* FaceMeshExporting.swift in Sources */,
+					E422DFCF1CEF8AF50047D7A4 /* AppDelegate.swift in Sources */,
+				);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1A2B322C4D5E60100000012 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,33 +493,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E422DFB31CEF894F0047D7A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1B2C312D4E5F60100000012 /* OBJFaceMeshExporter.swift in Sources */,
-				A1B2C311D4E5F60100000011 /* SimulationState.swift in Sources */,
-				A1B2C310D4E5F60100000010 /* DeformationContext.swift in Sources */,
-				A1B2C30ED4E5F6010000000E /* ControlsView.swift in Sources */,
-				A1B2C30DD4E5F6010000000D /* SceneKitFaceMeshRenderer.swift in Sources */,
-				A1B2C30CD4E5F6010000000C /* MeshRenderer.swift in Sources */,
-				A1B2C30BD4E5F6010000000B /* NoseAugmentation.swift in Sources */,
-				A1B2C30AD4E5F6010000000A /* DeformationPipeline.swift in Sources */,
-				A1B2C309D4E5F60100000009 /* Deformation.swift in Sources */,
-				A1B2C308D4E5F60100000008 /* FaceFrame.swift in Sources */,
-				A1B2C307D4E5F60100000007 /* FaceLandmarks.swift in Sources */,
-				A1B2C306D4E5F60100000006 /* FaceMesh.swift in Sources */,
-				A1B2C305D4E5F60100000005 /* FaceCaptureManager.swift in Sources */,
-				A1B2C304D4E5F60100000004 /* ARKitFaceMeshAdapter.swift in Sources */,
-				A1B2C303D4E5F60100000003 /* FaceCaptureManaging.swift in Sources */,
-				A1B2C302D4E5F60100000002 /* FacePipelineController.swift in Sources */,
-				A1B2C301D4E5F60100000001 /* FacePipelineViewController.swift in Sources */,
-				A1B2C30FD4E5F6010000000F /* FaceMeshExporting.swift in Sources */,
-				E422DFCF1CEF8AF50047D7A4 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1A2B331C4D5E60100000021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E422DFB61CEF894F0047D7A4 /* TrueDepthStreamer */;
+			targetProxy = F1A2B330C4D5E60100000020 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E422DFBE1CEF894F0047D7A4 /* Main.storyboard */ = {
@@ -522,55 +523,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F1A2B324C4D5E60100000014 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TrueDepthStreamerTests${SAMPLE_CODE_DISAMBIGUATOR}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrueDepthStreamer.app/TrueDepthStreamer";
-				TEST_TARGET_NAME = TrueDepthStreamer;
-			};
-			name = Debug;
-		};
-		F1A2B325C4D5E60100000015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TrueDepthStreamerTests${SAMPLE_CODE_DISAMBIGUATOR}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrueDepthStreamer.app/TrueDepthStreamer";
-				TEST_TARGET_NAME = TrueDepthStreamer;
-			};
-			name = Release;
-		};
 		E422DFC71CEF894F0047D7A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */;
@@ -700,7 +652,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2HYS22824Q;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = TrueDepthStreamer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -730,7 +682,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2HYS22824Q;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = TrueDepthStreamer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -750,18 +702,58 @@
 			};
 			name = Release;
 		};
+		F1A2B324C4D5E60100000014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TrueDepthStreamerTests${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrueDepthStreamer.app/TrueDepthStreamer";
+				TEST_TARGET_NAME = TrueDepthStreamer;
+			};
+			name = Debug;
+		};
+		F1A2B325C4D5E60100000015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E963F33EDFA721A40CA8B5 /* SampleCode.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TrueDepthStreamerTests${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrueDepthStreamer.app/TrueDepthStreamer";
+				TEST_TARGET_NAME = TrueDepthStreamer;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1A2B329C4D5E60100000019 /* Build configuration list for PBXNativeTarget "TrueDepthStreamerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F1A2B324C4D5E60100000014 /* Debug */,
-				F1A2B325C4D5E60100000015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E422DFB21CEF894F0047D7A4 /* Build configuration list for PBXProject "TrueDepthStreamer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -780,15 +772,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-/* End XCConfigurationList section */
-
-/* Begin PBXTargetDependency section */
-		F1A2B331C4D5E60100000021 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E422DFB61CEF894F0047D7A4 /* TrueDepthStreamer */;
-			targetProxy = F1A2B330C4D5E60100000020 /* PBXContainerItemProxy */;
+		F1A2B329C4D5E60100000019 /* Build configuration list for PBXNativeTarget "TrueDepthStreamerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1A2B324C4D5E60100000014 /* Debug */,
+				F1A2B325C4D5E60100000015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-/* End PBXTargetDependency section */
+/* End XCConfigurationList section */
 	};
 	rootObject = E422DFAF1CEF894F0047D7A4 /* Project object */;
 }

@@ -1,5 +1,6 @@
 import XCTest
 import UIKit
+import simd
 @testable import TrueDepthStreamer
 
 final class DeformationPipelineTests: XCTestCase {
@@ -77,5 +78,55 @@ final class FacePipelineViewControllerTests: XCTestCase {
         }
 
         return nil
+    }
+}
+
+final class FacePipelineControllerTests: XCTestCase {
+    func testPipelinePreservesCapturedSnapshotSeparatelyFromRenderedMesh() {
+        let renderer = MockRenderer()
+        let captureManager = MockCaptureManager()
+        let controller = FacePipelineController(renderer: renderer, captureManager: captureManager)
+        controller.updateSimulationState(SimulationState(noseProjection: 0.8))
+
+        let frame = FaceFrame(
+            mesh: TestFixtures.makeMesh(),
+            landmarks: FaceLandmarks(
+                noseTip: SIMD3<Float>(0, 0, 0),
+                chin: SIMD3<Float>(0, -0.05, 0),
+                jawline: []
+            ),
+            blendShapes: [:],
+            transform: matrix_identity_float4x4,
+            timestamp: 42
+        )
+
+        controller.consume(frame)
+
+        guard let snapshot = controller.latestSnapshot else {
+            return XCTFail("Expected the controller to retain the latest captured snapshot.")
+        }
+
+        TestFixtures.assertEqual(snapshot.mesh.vertices, frame.mesh.vertices)
+        XCTAssertEqual(snapshot.timestamp, 42, accuracy: 0.001)
+        XCTAssertNotNil(renderer.lastRenderedMesh)
+        XCTAssertGreaterThan(renderer.lastRenderedMesh?.vertices[0].z ?? 0, snapshot.mesh.vertices[0].z)
+    }
+
+    private final class MockRenderer: MeshRendering {
+        let view = UIView()
+        private(set) var lastRenderedMesh: FaceMesh?
+
+        func render(mesh: FaceMesh, transform: simd_float4x4) {
+            lastRenderedMesh = mesh
+        }
+    }
+
+    private final class MockCaptureManager: FaceCaptureManaging {
+        weak var delegate: FaceCaptureManagerDelegate?
+        weak var frameConsumer: FaceFrameConsumer?
+
+        func start() {}
+
+        func pause() {}
     }
 }

@@ -12,6 +12,7 @@ final class FacePipelineController {
     private let captureManager: FaceCaptureManaging
     private let deformationPipeline: DeformationPipeline
     private var simulationState = SimulationState()
+    private(set) var latestSnapshot: FaceMeshSnapshot?
 
     init(
         renderer: MeshRendering,
@@ -43,6 +44,12 @@ final class FacePipelineController {
 
 extension FacePipelineController: FaceFrameConsumer {
     func consume(_ frame: FaceFrame) {
+        latestSnapshot = FaceMeshSnapshot(
+            mesh: frame.mesh,
+            landmarks: frame.landmarks,
+            timestamp: frame.timestamp
+        )
+
         let context = DeformationContext(
             state: simulationState,
             landmarks: frame.landmarks,

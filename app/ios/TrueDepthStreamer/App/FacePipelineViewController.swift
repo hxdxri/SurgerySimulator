@@ -12,10 +12,24 @@ final class FacePipelineViewController: UIViewController {
     )
     private var simulationState = SimulationState()
 
+    private let inspectSnapshotButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Inspect 3D Snapshot", for: .normal)
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        btn.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.9)
+        btn.setTitleColor(.white, for: .normal)
+        btn.layer.cornerRadius = 10
+        btn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 18, bottom: 12, right: 18)
+        btn.accessibilityIdentifier = "inspect-snapshot-button"
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewHierarchy()
         configureBindings()
+        inspectSnapshotButton.addTarget(self, action: #selector(openSnapshotCanvas), for: .touchUpInside)
         pipelineController.delegate = self
         controlsView.statusText = "Ready to start face capture."
         controlsView.setControlsEnabled(true)
@@ -51,6 +65,7 @@ final class FacePipelineViewController: UIViewController {
         view.addSubview(renderScrimView)
         view.addSubview(runtimeGuidanceView)
         view.addSubview(controlsView)
+        view.addSubview(inspectSnapshotButton)
 
         NSLayoutConstraint.activate([
             renderView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -69,7 +84,10 @@ final class FacePipelineViewController: UIViewController {
 
             controlsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             controlsView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            controlsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+            controlsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+
+            inspectSnapshotButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            inspectSnapshotButton.bottomAnchor.constraint(equalTo: controlsView.topAnchor, constant: -22)
         ])
     }
 
@@ -102,6 +120,8 @@ final class FacePipelineViewController: UIViewController {
             )
             runtimeGuidanceView.isHidden = false
             renderScrimView.isHidden = false
+            inspectSnapshotButton.isEnabled = false
+            inspectSnapshotButton.alpha = 0.48
         case .failed(let reason):
             controlsView.setControlsEnabled(false)
             controlsView.setGuidance(
@@ -121,12 +141,46 @@ final class FacePipelineViewController: UIViewController {
             )
             runtimeGuidanceView.isHidden = false
             renderScrimView.isHidden = false
+            inspectSnapshotButton.isEnabled = false
+            inspectSnapshotButton.alpha = 0.48
         default:
             controlsView.setControlsEnabled(true)
             controlsView.setGuidance(title: nil, message: nil, tone: .info)
             runtimeGuidanceView.isHidden = true
             renderScrimView.isHidden = true
+            inspectSnapshotButton.isEnabled = true
+            inspectSnapshotButton.alpha = 1.0
         }
+    }
+
+    @objc private func openSnapshotCanvas() {
+        guard let snapshot = pipelineController.latestSnapshot, !snapshot.mesh.isEmpty else {
+            presentAlert(
+                title: "No snapshot available",
+                message: "Wait for live tracking to lock onto your face, then open the 3D canvas."
+            )
+            return
+        }
+
+        let canvas = FaceCanvasViewController(
+            snapshot: snapshot,
+            initialState: simulationState
+        )
+
+        if let navigationController = navigationController {
+            navigationController.pushViewController(canvas, animated: true)
+        } else {
+            let wrapped = UINavigationController(rootViewController: canvas)
+            wrapped.modalPresentationStyle = .fullScreen
+            present(wrapped, animated: true)
+        }
+    }
+
+    /// Utility to show alerts
+    private func presentAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
     }
 }
 
